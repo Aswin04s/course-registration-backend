@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@CrossOrigin(origins = {"http://localhost:5173", "https://*.vercel.app"})
+@CrossOrigin(origins = "*")
 public class CourseController {
 
     @Autowired
