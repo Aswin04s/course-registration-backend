@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: course-registration-backend
+    env: docker
+    plan: free
+    docker:
+      dockerfile: Dockerfile
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: production
+      - key: ALLOWED_ORIGINS
+        value: https://course-registration-frontend.vercel.app
