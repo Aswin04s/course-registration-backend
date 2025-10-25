@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Course added Successful</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            padding: 50px;
+        }
+        .success-message {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #28a745;
+        }
+        .home-button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="success-message">
+    <p>Successfully added
+        <strong th:text="${courseId}">"Course ID"</strong>
+        <strong th:text="${courseName}">"Course Name"</strong>
+        Course to the course list!
+    </p>
+
+
+    <!-- Fixed link -->
+    <a href="http://127.0.0.1:5500/index.html" class="home-button">Back to Home</a>
+    <br>
+    <a href="http://127.0.0.1:5500/availcourses.html" class="home-button">View All Courses</a>
+</div>
+</body>
+</html>

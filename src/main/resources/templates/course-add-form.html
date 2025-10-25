@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Course</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        .form-container { max-width: 500px; margin: 0 auto; }
+        input, button { width: 100%; padding: 10px; margin: 5px 0; }
+    </style>
+</head>
+<body>
+<div class="form-container">
+    <h2>Add New Course</h2>
+    <form action="/courses/add" method="post" >
+        <input type="text" name="courseId" placeholder="Course ID" required>
+        <input type="text" name="courseName" placeholder="Course Name" required>
+        <input type="text" name="trainer" placeholder="Trainer Name" required>
+        <input type="number" name="durationInWeeks" placeholder="Duration (Weeks)" required>
+        <button type="submit">Add Course</button>
+    </form>
+    <a href="http://127.0.0.1:5500/index.html">Back to Home</a>
+</div>
+
+
+</body>
+</html>
