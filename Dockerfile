@@ -1,8 +1,17 @@
+FROM eclipse-temurin:17-jdk-alpine AS builder
+
+WORKDIR /app
+
+COPY . .
+
+RUN chmod +x mvnw
+RUN ./mvnw clean package -DskipTests
+
 FROM eclipse-temurin:17-jre-alpine
 
 WORKDIR /app
 
-COPY target/course-registration-system-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=builder /app/target/course-registration-system-0.0.1-SNAPSHOT.jar app.jar
 
 EXPOSE 10000
 
