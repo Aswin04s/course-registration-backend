@@ -1,18 +1,11 @@
-FROM openjdk:17-slim
+FROM openjdk:17-jdk-slim
 
 WORKDIR /app
 
 COPY . .
 
-# Debug: Show environment variables
-RUN echo "Environment variables:"
-RUN env
-
 RUN chmod +x mvnw
 RUN ./mvnw clean package -DskipTests
-
-# Debug: Show built JAR
-RUN ls -la target/
 
 EXPOSE 10000
 
